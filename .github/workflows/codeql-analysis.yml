@@ -67,7 +67,7 @@ jobs:
           languages: java, javascript
 
       - name: Build
-        uses: MansaGroup/nrwl-nx-action@v2
+        uses: MansaGroup/nrwl-nx-action@v3
         with:
           targets: build
           all: 'true'

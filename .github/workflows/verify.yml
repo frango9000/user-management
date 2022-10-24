@@ -75,21 +75,21 @@ jobs:
         run: npx nx workspace-lint
 
       - name: Lint
-        uses: MansaGroup/nrwl-nx-action@v2
+        uses: MansaGroup/nrwl-nx-action@v3
         with:
           targets: lint
           all: 'true'
           parallel: 'true'
 
       - name: Build
-        uses: MansaGroup/nrwl-nx-action@v2
+        uses: MansaGroup/nrwl-nx-action@v3
         with:
           targets: build
           all: 'true'
           parallel: 'true'
 
       - name: Test
-        uses: MansaGroup/nrwl-nx-action@v2
+        uses: MansaGroup/nrwl-nx-action@v3
         with:
           targets: test
           all: 'true'
@@ -164,7 +164,7 @@ jobs:
           path: dist/apps/app
 
       - name: E2E
-        uses: MansaGroup/nrwl-nx-action@v2
+        uses: MansaGroup/nrwl-nx-action@v3
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
         with:
